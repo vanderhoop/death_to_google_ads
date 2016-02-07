@@ -1,0 +1,32 @@
+{
+  "name": "Death to Google Ads",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Blocks Google ads from your search results, improving your life.",
+  "icons": {
+    "19": "images/death-icon-128.png",
+    "38": "images/death-icon-128.png",
+    "128": "images/death-icon-128.png"
+  },
+  "default_locale": "en",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/jquery.min.js", "scripts/background.js"],
+      "css": ["styles/no_ads.css"]
+    }
+  ],
+  "background": {
+    "scripts": []
+  },
+  "permissions": [],
+  "browser_action": {
+    "default_icon": {
+      "19": "images/death-icon-128.png",
+      "38": "images/death-icon-128.png",
+      "128": "images/death-icon-128.png"
+    },
+    "default_title": "death_to_google_ads",
+    "default_popup": "popup.html"
+  }
+}
